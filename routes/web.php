@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NovelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('novels');
-});
+Route::get('/', [NovelController::class, 'index']);
+Route::get('/create', [NovelController::class, '']);
+Route::get('/update', [NovelController::class, '']);
+Route::get('/delete', [NovelController::class, '']);
