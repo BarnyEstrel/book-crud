@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [NovelController::class, 'index']);
-Route::get('/create', [NovelController::class, '']);
+Route::get('/create', [NovelController::class, 'create']);
 Route::get('/update', [NovelController::class, '']);
+Route::post('/store', [NovelController::class, 'store']);
 Route::get('/delete', [NovelController::class, '']);
